@@ -3214,6 +3214,23 @@ LINPHONE_PUBLIC void linphone_core_verify_server_certificates(LinphoneCore *lc, 
 **/
 LINPHONE_PUBLIC void linphone_core_verify_server_cn(LinphoneCore *lc, bool_t yesno);
 
+//ADDED by Anthony
+/**
+ * Checks whether or not core verifies the tls certificate of the SIP server.
+ * @param[in] lc #LinphoneCore object
+  * @return whether or not core verifies the tls certificate of the SIP server
+ * @ingroup initializing
+**/
+LINPHONE_PUBLIC bool_t linphone_core_is_verifying_certificates(LinphoneCore *lc);
+
+/**
+ * Checks whether or not core verifies the common name of the SIP server.
+ * @param[in] lc #LinphoneCore object
+  * @return whether or not core verifies the common name of the SIP server.
+ * @ingroup initializing
+**/
+LINPHONE_PUBLIC bool_t linphone_core_is_verifying_cn(LinphoneCore *lc);
+
 /**
  * Gets the path to a file or folder containing the trusted root CAs (PEM format)
  * @param[in] lc #LinphoneCore object
@@ -5145,22 +5162,6 @@ LINPHONE_PUBLIC const char * linphone_core_get_video_preset(const LinphoneCore *
 LINPHONE_PUBLIC bool_t linphone_core_realtime_text_enabled(LinphoneCore *lc);
 
 LINPHONE_PUBLIC void linphone_core_enable_realtime_text(LinphoneCore *lc, bool_t value);
-
-/**
- * Gets keep alive interval of real time text.
- * @param[in] lc #LinphoneCore object
- * @return keep alive interval of real time text.
- * @ingroup media_parameters
- */
-LINPHONE_PUBLIC unsigned int linphone_core_realtime_text_get_keepalive_interval(const LinphoneCore *lc);
-
-/**
- * Set keep alive interval for real time text.
- * @param[in] lc #LinphoneCore object
- * @param[in] interval The keep alive interval of real time text, 25000 by default.
- * @ingroup network_parameters
- */
-LINPHONE_PUBLIC void linphone_core_realtime_text_set_keepalive_interval(LinphoneCore *lc, unsigned int interval);
 
 /**
  * Set http proxy address to be used for signaling during next channel connection. Use #linphone_core_set_network_reachable FASLE/TRUE to force channel restart.

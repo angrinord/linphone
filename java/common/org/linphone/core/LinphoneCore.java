@@ -2545,7 +2545,13 @@ public interface LinphoneCore {
 	 * Specify whether the tls server certificate common name must be verified when connecting to a SIP/TLS server.
 	 * @param enable A boolean value telling whether the tls server certificate common name must be verified
 	 */
-	public void setVerifyServerCN(boolean enable);
+	public void setVerifyServerCn(boolean enable);
+
+	//ADDED by Anthony
+	public boolean isVerifyingCertificates();
+
+	//ADDED by Anthony
+	public boolean isVerifyingCn();
 
 	/**
 	 * Enable or not openh264 download

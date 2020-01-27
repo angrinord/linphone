@@ -342,7 +342,6 @@ struct video_config{
 
 struct text_config{
 	bool_t enabled;
-	unsigned int keepalive_interval;
 };
 
 struct ui_config

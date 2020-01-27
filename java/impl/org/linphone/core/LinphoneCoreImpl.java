@@ -1812,10 +1812,24 @@ class LinphoneCoreImpl implements LinphoneCore {
 		setVerifyServerCertificates(nativePtr, enable);
 	}
 
-	private native void setVerifyServerCN(long ptr, boolean enable);
+	private native void setVerifyServerCn(long ptr, boolean enable);
 	@Override
-	public void setVerifyServerCN(boolean enable) {
-		setVerifyServerCN(nativePtr, enable);
+	public void setVerifyServerCn(boolean enable) {
+		setVerifyServerCn(nativePtr, enable);
+	}
+
+	//ADDED by Anthony
+	private native boolean isVerifyingCertificates();
+	@Override
+	public boolean isVerifyingCertificates(){
+		isVerifyingCertificates(nativePtr);
+	}
+
+	//ADDED by Anthony
+	private native boolean isVerifyingCn();
+	@Override
+	public boolean isVerifyingCn(){
+		isVerifyingCn(nativePtr);
 	}
 
 	public void enableDownloadOpenH264(boolean enable) {
