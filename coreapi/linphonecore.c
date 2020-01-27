@@ -4671,14 +4671,14 @@ void linphone_core_verify_server_cn(LinphoneCore *lc, bool_t yesno){
 //ADDED by Anthony
 //Check whether or not peer verification is enabled
 bool_t linphone_core_is_verifying_certificates(LinphoneCore *lc){
-    if (lp_config_get_int(lc->config,"sip","is_verifying_certificates", 0)==0){
+    if (lp_config_get_int(lc->config,"sip","verify_server_certs", 0)==0){
         return FALSE;
     }
     return TRUE;
 }
 
 bool_t linphone_core_is_verifying_cn(LinphoneCore *lc){
-    if (lp_config_get_int(lc->config,"sip","is_verifying_cn", 0)==0){
+    if (lp_config_get_int(lc->config,"sip","verify_server_cn", 0)==0){
             return FALSE;
         }
         return TRUE;
