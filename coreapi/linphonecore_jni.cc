@@ -8905,6 +8905,15 @@ extern "C" void Java_org_linphone_core_LinphoneCoreImpl_setVerifyServerCN(JNIEnv
 	linphone_core_verify_server_cn((LinphoneCore*)lc, enabled);
 }
 
+//ADDED by Anthony
+extern "C" jboolean Java_org_linphone_core_LinphoneCoreImpl_isVerifyingCertificates(JNIEnv *env, jobject, jlong lc){
+    return (jboolean)linphone_core_is_verifying_certificates((LinphoneCore*)lc);
+}
+
+extern "C" jboolean Java_org_linphone_core_LinphoneCoreImpl_isVerifyingCn(JNIEnv *env, jobject, jlong lc){
+    return (jboolean)linphone_core_is_verifying_cn((LinphoneCore*)lc);
+}
+
 extern "C" jstring Java_org_linphone_core_LinphoneCoreImpl_getTlsCertificate(JNIEnv *env , jobject, jlong lc) {
 	const char* cert = linphone_core_get_tls_cert((LinphoneCore*)lc);
 	if (cert) {

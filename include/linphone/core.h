@@ -3229,6 +3229,23 @@ LINPHONE_PUBLIC void linphone_core_verify_server_certificates(LinphoneCore *lc, 
 **/
 LINPHONE_PUBLIC void linphone_core_verify_server_cn(LinphoneCore *lc, bool_t yesno);
 
+//ADDED by Anthony
+/**
+ * Checks whether or not core verifies the tls certificate of the SIP server.
+ * @param[in] lc #LinphoneCore object
+  * @return whether or not core verifies the tls certificate of the SIP server
+ * @ingroup initializing
+**/
+LINPHONE_PUBLIC bool_t linphone_core_is_verifying_certificates(LinphoneCore *lc);
+
+/**
+ * Checks whether or not core verifies the common name of the SIP server.
+ * @param[in] lc #LinphoneCore object
+  * @return whether or not core verifies the common name of the SIP server.
+ * @ingroup initializing
+**/
+LINPHONE_PUBLIC bool_t linphone_core_is_verifying_cn(LinphoneCore *lc);
+
 /**
  * Gets the path to a file or folder containing the trusted root CAs (PEM format)
  * @param[in] lc #LinphoneCore object

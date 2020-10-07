@@ -4702,6 +4702,22 @@ void linphone_core_verify_server_cn(LinphoneCore *lc, bool_t yesno){
 	lp_config_set_int(lc->config,"sip","verify_server_cn",yesno);
 }
 
+//ADDED by Anthony
+//Check whether or not peer verification is enabled
+bool_t linphone_core_is_verifying_certificates(LinphoneCore *lc){
+    if (lp_config_get_int(lc->config,"sip","verify_server_certs", 0)==0){
+        return FALSE;
+    }
+    return TRUE;
+}
+
+bool_t linphone_core_is_verifying_cn(LinphoneCore *lc){
+    if (lp_config_get_int(lc->config,"sip","verify_server_cn", 0)==0){
+            return FALSE;
+        }
+        return TRUE;
+}
+
 void linphone_core_set_ssl_config(LinphoneCore *lc, void *ssl_config) {
 	lc->sal->setSslConfig(ssl_config);
 	if (lc->http_crypto_config) {

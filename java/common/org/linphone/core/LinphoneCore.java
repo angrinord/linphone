@@ -2547,6 +2547,12 @@ public interface LinphoneCore {
 	 */
 	public void setVerifyServerCN(boolean enable);
 
+	//ADDED by Anthony
+	public boolean isVerifyingCertificates();
+
+	//ADDED by Anthony
+	public boolean isVerifyingCn();
+
 	/**
 	 * Enable or not openh264 download
 	 * @param enable
