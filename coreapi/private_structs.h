@@ -538,7 +538,7 @@ struct _LinphoneXmlRpcRequest {
 	char *method;
 	LinphoneXmlRpcStatus status;
 	struct _LinphoneXmlRpcArg response;
-	LinphoneCore *core;
+
 	char *raw_response;
 };
 

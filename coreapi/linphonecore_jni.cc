@@ -8901,7 +8901,7 @@ extern "C" void Java_org_linphone_core_LinphoneCoreImpl_setVerifyServerCertifica
 	linphone_core_verify_server_certificates((LinphoneCore*)lc, enabled);
 }
 
-extern "C" void Java_org_linphone_core_LinphoneCoreImpl_setVerifyServerCN(JNIEnv *env, jobject, jlong lc, jboolean enabled) {
+extern "C" void Java_org_linphone_core_LinphoneCoreImpl_setVerifyServerCn(JNIEnv *env, jobject, jlong lc, jboolean enabled) {
 	linphone_core_verify_server_cn((LinphoneCore*)lc, enabled);
 }
 
