@@ -1832,6 +1832,20 @@ class LinphoneCoreImpl implements LinphoneCore {
 		isVerifyingCn(nativePtr);
 	}
 
+	//ADDED by Anthony
+	private native boolean isVerifyingCertificates();
+	@Override
+	public boolean isVerifyingCertificates(){
+		isVerifyingCertificates(nativePtr);
+	}
+
+	//ADDED by Anthony
+	private native boolean isVerifyingCn();
+	@Override
+	public boolean isVerifyingCn(){
+		isVerifyingCn(nativePtr);
+	}
+
 	public void enableDownloadOpenH264(boolean enable) {
 		openh264DownloadEnabled = enable;
 	}

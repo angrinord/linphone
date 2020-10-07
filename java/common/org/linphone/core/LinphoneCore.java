@@ -2553,6 +2553,12 @@ public interface LinphoneCore {
 	//ADDED by Anthony
 	public boolean isVerifyingCn();
 
+	//ADDED by Anthony
+	public boolean isVerifyingCertificates();
+
+	//ADDED by Anthony
+	public boolean isVerifyingCn();
+
 	/**
 	 * Enable or not openh264 download
 	 * @param enable
